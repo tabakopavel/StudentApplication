@@ -1,0 +1,11 @@
+Log_db\Omissions_logic.class
+qwe.class
+Controller\StudentController.class
+Log_db\Student_logic.class
+Model\Omissions.class
+Log_db\Group_names_logic.class
+Model\Group.class
+Model\Student.class
+Log_db\Group_logic.class
+Database\Connections.class
+Model\Group_names.class

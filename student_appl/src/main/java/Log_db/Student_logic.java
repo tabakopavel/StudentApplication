@@ -15,7 +15,7 @@ public class Student_logic {
 
         public void checkStudent(Student student) {
             try {
-                PreparedStatement ps = connection.prepareStatement("select * from student_app_db.student where id_st name = ?");
+                PreparedStatement ps = connection.prepareStatement("select * from student_app_db.student where id_st =?");
                 ps.setInt(1, student.getId_st());
                 ResultSet rs = ps.executeQuery();
                 if (rs.next())

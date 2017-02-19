@@ -9,5 +9,7 @@
 </head>
 <body>
 <jsp:forward page="/StudentController?action=listStudent"></jsp:forward>
+
+
 </body>
 </html>

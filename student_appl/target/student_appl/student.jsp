@@ -12,8 +12,8 @@
     %>
     <% if (action.equalsIgnoreCase("edit")) {%>
 
-    Student id_st : <c:out value="${student.id_st}" /> <br />
-
+    Student id_st : <input type="text" name="id_st" readonly="readonly"
+                           value="<c:out value="${student.id_st}" />" /> <br />
     Student Name : <input type="text" name="st_name"
                           value="<c:out value="${student.st_name}" />" /> <br />
     Student SurName : <input type="text" name="st_surname"
@@ -24,8 +24,6 @@
                           value="<c:out value="${student.num_st_book}" />" /> <br />
     Student Year : <input type="text" name="year"
                           value="<c:out value="${student.year}" />" /> <br />
-
-
 
     <%} else {%>
 
@@ -40,11 +38,7 @@
     Student Year : <input type="text" name="year"
                           value="<c:out value="${student.year}" />" /> <br />
 
-
-
     <%} %>
-
-
     <input  type="submit" value="Submit" />
 </form>
 </body>

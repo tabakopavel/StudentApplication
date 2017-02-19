@@ -59,18 +59,13 @@ public class StudentController extends HttpServlet {
         student.setSt_ph_num(request.getParameter("st_ph_num"));
         student.setNum_st_book(request.getParameter("num_st_book"));
         student.setYear(Integer.parseInt(request.getParameter("year")));
-        int id_st = 0;
+
         try {
-            id_st = Integer.parseInt(request.getParameter("id_st"));
+            int id_st = Integer.parseInt(request.getParameter("id_st"));
+            student.setId_st(id_st);
         } catch (NullPointerException e) {
         } finally {
-            if (id_st > 0) {
-                student.setId_st(id_st);
-                log.checkStudent(student);
-            } else {
-                log.addStudent(student);
-            }
-
+            log.checkStudent(student);
             forward = LIST_USER;
             request.setAttribute("students", log.getAllStudent());
             RequestDispatcher view = request.getRequestDispatcher(forward);

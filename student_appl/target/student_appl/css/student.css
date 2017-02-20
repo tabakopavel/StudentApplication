@@ -2,6 +2,8 @@ body{
     background-size: cover;
     background: #464646 url(/images/background2.jpg) no-repeat fixed center center;
 }
+
+
 .student_table_add {
     background: #f5ffff;
     border-collapse: collapse;
@@ -18,12 +20,15 @@ body{
     padding: 10px 15px;
     position: relative;
 }
+
+
 .student_table {
     background: #f5ffff;
     border-collapse: collapse;
     text-align: left;
     margin: auto;
     width: 900px;
+    align: center;
 }
 .student_table th {
     border-top: 1px solid #777777;
@@ -71,6 +76,7 @@ body{
     color: #444444;
     text-shadow: none;
 }
+
 
 .overlay {
     top: 0;

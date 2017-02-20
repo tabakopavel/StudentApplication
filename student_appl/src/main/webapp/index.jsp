@@ -8,8 +8,6 @@
     <title>Student Controller</title>
 </head>
 <body>
-<jsp:forward page="/StudentController?action=listStudent"></jsp:forward>
-
-
+<jsp:forward page="/MainController?action=main"></jsp:forward>
 </body>
 </html>

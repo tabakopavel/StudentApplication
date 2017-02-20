@@ -1,7 +1,7 @@
 package Controller;
 
-import Log_db.Student_logic;
-import Model.Student;
+import Log_db.*;
+import Model.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,12 +17,14 @@ public class StudentController extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/student.jsp";
-    private static String LIST_USER = "/listStudent.jsp";
+    private static String MAIN = "/main.jsp";
     private Student_logic log = null;
+    private Subject_logic log_sub = null;
 
     public StudentController() {
         super();
         log = new Student_logic();
+        log_sub = new Subject_logic();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,7 +35,7 @@ public class StudentController extends HttpServlet {
         if (action.equalsIgnoreCase("delete")) {
             int id_st = Integer.valueOf(request.getParameter("id_st"));
             log.deleteStudent(id_st);
-            forward = LIST_USER;
+            forward = MAIN;
             request.setAttribute("students", log.getAllStudent());
         } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
@@ -41,8 +43,9 @@ public class StudentController extends HttpServlet {
             Student student = log.getStudentByid(id_st);
             request.setAttribute("student", student);
         } else if (action.equalsIgnoreCase("listStudent")) {
-            forward = LIST_USER;
+            forward = MAIN;
             request.setAttribute("students", log.getAllStudent());
+            request.setAttribute("subjects",log_sub.getAllSubjects());
         } else {
             forward = INSERT_OR_EDIT;
         }
@@ -66,7 +69,7 @@ public class StudentController extends HttpServlet {
         } catch (NullPointerException e) {
         } finally {
             log.checkStudent(student);
-            forward = LIST_USER;
+            forward = MAIN;
             request.setAttribute("students", log.getAllStudent());
             RequestDispatcher view = request.getRequestDispatcher(forward);
             view.forward(request, response);

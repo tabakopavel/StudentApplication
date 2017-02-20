@@ -6,53 +6,34 @@
 </HEAD>
 
 <BODY>
-<FORM action="" method="post">
+<FORM  method="post" action="">
     Course Name: <INPUT type="text" name="title" size="35"><BR>
+
     Course Time:
-    Sun<INPUT type="checkbox" name="day" value="sun">
-    Mon<INPUT type="checkbox" name="day" value="mon">
-    Tue<INPUT type="checkbox" name="day" value="tue">
-    Wed<INPUT type="checkbox" name="day" value="wed">
-    Thu<INPUT type="checkbox" name="day" value="thu">
-    Fri<INPUT type="checkbox" name="day" value="fri">
-    Sat<INPUT type="checkbox" name="day" value="sat">
-    <SELECT name="starttime">
-        <OPTION value="8">8:00am</OPTION>
-        <OPTION value="9">9:00am</OPTION>
-        <OPTION value="10">10:00am</OPTION>
-        <OPTION value="11">11:00am</OPTION>
-        <OPTION value="12">12:00pm</OPTION>
-        <OPTION value="13">1:00pm</OPTION>
-        <OPTION value="14">2:00pm</OPTION>
-        <OPTION value="15">3:00pm</OPTION>
-        <OPTION value="16">4:00pm</OPTION>
-        <OPTION value="17">5:00pm</OPTION>
-        <OPTION value="18">6:00pm</OPTION>
-        <OPTION value="19">7:00pm</OPTION>
-        <OPTION value="20">8:00pm</OPTION>
-        <OPTION value="21">9:00pm</OPTION>
-    </SELECT>
-    to
-    <SELECT name="endtime">
-        <OPTION value="9">9:00am</OPTION>
-        <OPTION value="10">10:00am</OPTION>
-        <OPTION value="11">11:00am</OPTION>
-        <OPTION value="12">12:00pm</OPTION>
-        <OPTION value="13">1:00pm</OPTION>
-        <OPTION value="14">2:00pm</OPTION>
-        <OPTION value="15">3:00pm</OPTION>
-        <OPTION value="16">4:00pm</OPTION>
-        <OPTION value="17">5:00pm</OPTION>
-        <OPTION value="18">6:00pm</OPTION>
-        <OPTION value="19">7:00pm</OPTION>
-        <OPTION value="20">8:00pm</OPTION>
-        <OPTION value="21">9:00pm</OPTION>
-        <OPTION value="22">10:00pm</OPTION>
+    Mon<INPUT type="checkbox" name="day" value="Monday">
+    Tue<INPUT type="checkbox" name="day" value="Tuesday">
+    Wed<INPUT type="checkbox" name="day" value="Wednesday">
+    Thu<INPUT type="checkbox" name="day" value="Thursday">
+    Fri<INPUT type="checkbox" name="day" value="Friday">
+    Sat<INPUT type="checkbox" name="day" value="Saturday">
+    Sun<INPUT type="checkbox" name="day" value="Sunday">
+    <SELECT name="Pare">
+        <OPTION value="1">8:15-9:35</OPTION>
+        <OPTION value="2">9:45-11:05</OPTION>
+        <OPTION value="3">11:15-12:35</OPTION>
+        <OPTION value="4">12:45-14:05</OPTION>
+        <OPTION value="5">14:25-15:45</OPTION>
+        <OPTION value="6">15:55-17:15</OPTION>
+        <OPTION value="7">17:25-18:45</OPTION>
+        <OPTION value="8">18:55-20:15</OPTION>
+        <OPTION value="9">20:25-21:45</OPTION>
     </SELECT>
     <BR>
     <BR>
     <INPUT type="submit" name="Submit" value="Add Course">
 </FORM>
+
+
 
 </BODY>
 </HTML>

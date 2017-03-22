@@ -1,7 +1,3 @@
-.table_table{
-    float: left
-}
-
 .subject_table_add {
     background: #f5ffff;
     border-collapse: collapse;
@@ -18,14 +14,13 @@
     padding: 10px 15px;
     position: relative;
 }
-
 .subject_table {
     background: #f5ffff;
     border-collapse: collapse;
     text-align: left;
     margin: auto;
-    width: 250px;
-    align: left;
+    width: auto;
+    align: center;
 }
 .subject_table th {
     border-top: 1px solid #777777;
@@ -36,7 +31,6 @@
     padding: 10px 15px;
     position: relative;
 }
-
 .subject_table th:after {
     content: "";
     display: block;

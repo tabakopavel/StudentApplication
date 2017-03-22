@@ -37,11 +37,13 @@ public class StudentController extends HttpServlet {
             log.deleteStudent(id_st);
             forward = MAIN;
             request.setAttribute("students", log.getAllStudent());
+            request.setAttribute("subjects",log_sub.getAllSubjects());
         } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
             int id_st = Integer.valueOf(request.getParameter("id_st"));
             Student student = log.getStudentByid(id_st);
             request.setAttribute("student", student);
+            request.setAttribute("subjects",log_sub.getAllSubjects());
         } else if (action.equalsIgnoreCase("listStudent")) {
             forward = MAIN;
             request.setAttribute("students", log.getAllStudent());
@@ -71,6 +73,7 @@ public class StudentController extends HttpServlet {
             log.checkStudent(student);
             forward = MAIN;
             request.setAttribute("students", log.getAllStudent());
+            request.setAttribute("subjects",log_sub.getAllSubjects());
             RequestDispatcher view = request.getRequestDispatcher(forward);
             view.forward(request, response);
         }

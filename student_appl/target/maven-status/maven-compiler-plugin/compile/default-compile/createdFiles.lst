@@ -4,12 +4,16 @@ Log_db\Group_names_logic.class
 Model\Student.class
 Controller\MainController.class
 Database\Connections.class
+Controller\UserController.class
+Model\User.class
 qwe.class
 Controller\StudentController.class
 Log_db\Student_logic.class
 Controller\SubjectController.class
 Model\Group.class
 Log_db\Group_logic.class
+Controller\LogOutController.class
 Model\Subject.class
+Log_db\User_logic.class
 Model\Group_names.class
 Log_db\Subject_logic.class

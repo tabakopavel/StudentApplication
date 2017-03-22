@@ -50,7 +50,7 @@ public class SubjectController extends HttpServlet {
         Subject subject = new Subject();
         String forward = "";
 
-        subject.setSub_name(request.getParameter("sub_name"));
+        subject.setSub_name(request.getParameter("id_name"));
         subject.setSub_tutor(request.getParameter("sub_tutor"));
 
         try {

@@ -2,6 +2,9 @@ C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Contr
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Log_db\Student_logic.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Model\Omissions.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Model\Student.java
+C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Controller\LogOutController.java
+C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Controller\UserController.java
+C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Log_db\User_logic.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Model\Group.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Controller\SubjectController.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Database\Connections.java
@@ -11,5 +14,6 @@ C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Model
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Controller\MainController.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Log_db\Omissions_logic.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Log_db\Group_logic.java
+C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Model\User.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Log_db\Group_names_logic.java
 C:\project_idea_ultimate\git\StudentApplication\student_appl\src\main\java\Log_db\Subject_logic.java

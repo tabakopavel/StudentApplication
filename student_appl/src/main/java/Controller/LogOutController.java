@@ -3,15 +3,12 @@ package Controller;
 import Log_db.Student_logic;
 import Log_db.Subject_logic;
 import Log_db.User_logic;
-import Model.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet("/LogOutController")
 public class LogOutController extends HttpServlet {
@@ -61,7 +58,7 @@ public class LogOutController extends HttpServlet {
         }
 
 
-        if (action == "logout" /*&& logged == "true"*/) {
+        if (action.equalsIgnoreCase("logout") /*&& logged == "true"*/) {
             System.out.println("work delete method");
             user_logic.deleteTokenByName(user_name);
             session.removeAttribute("logged");
@@ -92,12 +89,13 @@ public class LogOutController extends HttpServlet {
                 session.invalidate();
                 session.setMaxInactiveInterval(0);
             }
-            forward = REG_FORM;
+           // forward = REG_FORM;
 
+response.sendRedirect(REG_FORM);
         }
 
-        RequestDispatcher view = request.getRequestDispatcher(forward);
-        view.forward(request, response);
+       // RequestDispatcher view = request.getRequestDispatcher(forward);
+       // view.forward(request, response);
     }
 
     @Override

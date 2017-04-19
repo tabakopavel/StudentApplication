@@ -14,11 +14,9 @@ public class qwe {
         Subject_logic log_sub = new Subject_logic();
         User_logic user_log = new User_logic();
 
-       user_log.checkTokenByName("admin","B1902A99344F08EEE124EC540B451399");
-       System.out.println(user_log.checkTokenByName("admin","B1902A99344F08EEE124EC540B451399"));
-       if (user_log.checkTokenByName("admin","B1902A99344F08EEE124EC540B451399")!=true){
-           System.out.println("false");
-       }
+       String d=new String();
+       System.out.println(d);
+        System.out.println(d.equalsIgnoreCase(null));
 //user_log.deleteUser("admin");
     }
 }

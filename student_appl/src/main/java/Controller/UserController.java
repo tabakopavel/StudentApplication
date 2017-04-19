@@ -50,6 +50,7 @@ public class UserController extends HttpServlet {
             warning.setMaxAge(10);
         } else if (logged.equalsIgnoreCase("true")) {
             forward=USER_PAGE;
+            user.setUser((String)session.getAttribute("username"));
             List<User> users = new ArrayList<User>();
             users.add(user_logic.getUserByName(user.getUser()));
             session.setAttribute("users", users);

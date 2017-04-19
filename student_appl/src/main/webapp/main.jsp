@@ -17,36 +17,41 @@
     String logged = (String) session.getAttribute("logged");
     String admin = (String) session.getAttribute("admin");
     System.out.println(logged);
-
-    User_logic user_logic = new User_logic();
-    if (logged.equalsIgnoreCase("false")) {
-        response.sendRedirect("reg_form.html");
-        Cookie warning = new Cookie("warning", "You_are_not_logged_in");
-        warning.setMaxAge(10);
-    } else if (admin.equalsIgnoreCase("false")) {
-        response.sendRedirect("/UserController");
-    } else if (logged.equalsIgnoreCase("true") && admin.equalsIgnoreCase("true")) {
-        String user_name = (String) session.getAttribute("username");
-        String user_token = null;
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("user_token")) user_token = cookie.getValue();
-            }
-        }
-        boolean check = user_logic.checkTokenByName(user_name, user_token);
-        if (check == false) {
+    if (logged == null) {
+        response.sendRedirect("/MainController");
+        System.out.println("user page send redirect");
+    } else {
+        User_logic user_logic = new User_logic();
+        if (logged.equalsIgnoreCase("false")) {
             response.sendRedirect("reg_form.html");
             Cookie warning = new Cookie("warning", "You_are_not_logged_in");
             warning.setMaxAge(10);
-        }
+        } else if (admin.equalsIgnoreCase("false")) {
+            response.sendRedirect("/UserController");
+        } else if (logged.equalsIgnoreCase("true") && admin.equalsIgnoreCase("true")) {
+            String user_name = (String) session.getAttribute("username");
+            String user_token = null;
+            Cookie[] cookies = request.getCookies();
+            if (cookies != null) {
+                for (Cookie cookie : cookies) {
+                    if (cookie.getName().equals("user_token")) user_token = cookie.getValue();
+                }
+            }
+            boolean check = user_logic.checkTokenByName(user_name, user_token);
+            if (check == false) {
+                response.sendRedirect("reg_form.html");
+                Cookie warning = new Cookie("warning", "You_are_not_logged_in");
+                warning.setMaxAge(10);
+            }
 
-    } else if (logged.equalsIgnoreCase("true") && admin.equalsIgnoreCase("false")) {
-        response.sendRedirect("/UserController");
-    } else if (logged == null) {
-        response.sendRedirect("/MainController");
-        System.out.println("user page send redirect");
+        } else if (logged.equalsIgnoreCase("true") && admin.equalsIgnoreCase("false")) {
+            response.sendRedirect("/UserController");
+        } else if (logged == null) {
+            response.sendRedirect("/MainController");
+            System.out.println("user page send redirect");
+        }
     }
+
 %>
 <div class="bodyflex">
 
@@ -238,11 +243,6 @@
             <a class="close" title="¬©¬Ñ¬Ü¬â¬í¬ä¬î" href="#close"></a>
         </div>
     </div>
-
-
-    <%
-
-    %>
 
 </div>
 </body>

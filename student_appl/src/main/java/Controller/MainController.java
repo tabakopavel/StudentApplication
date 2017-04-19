@@ -57,6 +57,7 @@ public class MainController extends HttpServlet {
             request.setAttribute("subjects", log_sub.getAllSubjects());
         } else if (logged.equalsIgnoreCase("true")&&admin.equalsIgnoreCase("false")) {
             forward=USER_PAGE;
+            user.setUser((String)session.getAttribute("username"));
             List<User> users = new ArrayList<User>();
             users.add(user_logic.getUserByName(user.getUser()));
             session.setAttribute("users", users);
